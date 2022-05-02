@@ -1,19 +1,19 @@
 
 
-# Syn-stealer Hackathon Project
+# 🎬 Syn-stealer Hackathon Project
 
 **모두의 연구소 AIFFEL X SIM2REAL**
 <br>
 <br>
 
-## 👥 팀 소개
+## 🚦 팀 소개
 <img src="https://user-images.githubusercontent.com/96896676/166176230-16a667b6-6d43-47c3-9337-eae2c504a9d9.png" width="500">
 
-🌟 주연은 아니지만 관객들에게 주연처럼 주목을 받는 신 스틸러(Scene stealer)처럼<br>실제 데이터만큼이나 좋은 성능을 보여주어 주목을 받을 수 있는 합성 데이터(Synthetic data)를 만들고자 합니다.
+🌟 주연은 아니지만 관객들에게 주연처럼 주목을 받는 **신 스틸러(Scene stealer)**처럼<br>실제 데이터만큼이나 좋은 성능을 보여주어 주목을 받을 수 있는 **합성 데이터(Synthetic data)**를 만들고자 합니다.
 <br>
 <br>
 
-## 🔸 구성원
+## 👥 구성원
 |직책|이름|역할|
 |:--:|:--:|:--:|
 |팀장|문덕종||
@@ -43,6 +43,10 @@
 - [KITTI (Test Dataset)](http://www.cvlibs.net/datasets/kitti/)
 - [VKITTI](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds-vkitti-2/)
 - SIM2REAL 자율주행 데이터
+
+<br>
+## ✔︎ 진행 과정
+추후 추가 예정
 
 <br><br>
 ## 📃 References
