@@ -51,11 +51,7 @@ Object Detection 모델 중 대표적인 세 가지 모델인 YOLOv5, RetinaNet,
 |Phase3|소형 객체 탐지에 대한 성능 향상을 위한 연구|5/27 ~ 6/7|
 
 <br><br>
-## 📃 References
-|제목|분류|비고|
-|:--|:--:|--|
-|[Training Deep Networks with Synthetic Data](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3a5f1dc2-4ac7-4ab8-ac30-2a0e3673ede7/Training_Deep_Networks_with_Synthetic_Data.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220502%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220502T023835Z&X-Amz-Expires=86400&X-Amz-Signature=931102fc38d0be955c1c82015141f794bbeb6182d8da8c0beb288d51822a38c5&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Training%2520Deep%2520Networks%2520with%2520Synthetic%2520Data.pdf%22&x-id=GetObject)|논문||
-|[자율주행 차량의 학습 데이터 자동 생성 시스템 개발](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/d05d19ec-9059-478b-b494-21b7dfc1a8f4/MoraiSim.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220502%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220502T024007Z&X-Amz-Expires=86400&X-Amz-Signature=8dff1fadb2049a797743040bbcba52d9c41389700b8d6d089ed6af1a8000c8e2&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22MoraiSim.pdf%22&x-id=GetObject)|논문||
-|[Realistic Blur Synthesis for Learning Image Deblurring](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a1fa4ac3-3053-4f70-9644-9109d2ac596a/Realistic_Blur_Synthesis_for_Learning_Image_Deblurring.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220502%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220502T024047Z&X-Amz-Expires=86400&X-Amz-Signature=b17b4e44dbba6ecdd052db8b82e68d97bb86efd9140875a79752df931fd06903&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Realistic%2520Blur%2520Synthesis%2520for%2520Learning%2520Image%2520Deblurring.pdf%22&x-id=GetObject)|논문||
-|[Stereo R-CNN based 3D Object Detection for Autonomous Driving](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a69707ab-d159-420b-8775-94884805b58f/Stereo_R-CNN_based_3D_Object_Detection_for_Autonomous_Driving.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220502%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220502T024124Z&X-Amz-Expires=86400&X-Amz-Signature=b1eab9761497a0c3ae9523ffaa0d4d606c9055a18abef043339269e4d21c047d&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Stereo%2520R-CNN%2520based%25203D%2520Object%2520Detection%2520for%2520Autonomous%2520Driving.pdf%22&x-id=GetObject)|논문||
-|[S2R-DepthNet: Learning a Generalizable Depth-specific Structural Representation](https://arxiv.org/pdf/2104.00877v2.pdf)|논문||
+## 📃 References Models
+- [YOLOv5](https://github.com/ultralytics/yolov5) <br>
+- [RetinaNet](https://keras.io/examples/vision/retinanet/)<br>
+- [EfficientDet](https://github.com/google/automl/tree/master/efficientdet)
