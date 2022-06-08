@@ -1,6 +1,6 @@
 
 
-# 🎬 Syn-stealer Hackathon Project
+# 🎬 Syn-stealer Aiffelthon Project
 
 **모두의 연구소 AIFFEL**
 <br>```본 프로젝트는 기존에 SIM2REAL이라는 기업이 함께 참여하여 제안한 과업 주제로 진행되어야 했으나, 한정된 시간과 기업 측의 협조 등의 문제를 고려하여 연구 주제와 방향을 새롭게 하였음을 미리 알립니다.```
