@@ -1,0 +1,2 @@
+aihub(xml)_to_tfrecords.ipynb filter=lfs diff=lfs merge=lfs -text
+vkitti_and_kitti_to_tfrecords.ipynb filter=lfs diff=lfs merge=lfs -text
