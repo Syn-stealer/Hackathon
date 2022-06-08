@@ -127,4 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 .DS_Store
+=======
+<<<<<<< Updated upstream
+>>>>>>> ksh
+=======
+
+# project
+.DS_Store
+>>>>>>> kbk
+>>>>>>> 3847cfafb52a8fd9df8491e8df617350d19bd3a2
