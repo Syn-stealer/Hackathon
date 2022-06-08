@@ -1,0 +1,47 @@
+﻿유형,1차,2차,3차,4차,5차(사실상 1차)
+가설 및 목표,모델 학습 cycle 한번 돌려보기,"bbox 라벨링 성능 비교
+(보이는 부분만 vs 보이지 않는 부분까지)
+
+2가지 버전으로 모델 학습",occlusion 0인 자동차 객체들 bbox 라벨에 50% crop 버전들 4개 추가로 가려진 자동차 검출 개선,"더 큰 화질, 좀 더 큰 모델에서 돌렸을 때 성능 확인",그냥 Occusion 0인 자동차 객체만 있는 이미지만 추려서 occlusion 없는 데이터로 학습 시 어떤 결과가 나오는지 확인한다.
+이미지 인풋 사이즈,640,640,640,1280,1280
+배치,16,16,16,16,-1
+모델,YOLOv5s,YOLOv5s,YOLOv5s,YOLOv5s6,YOLOv5s6
+에포크,300,100,197(중간에 끊김),150,200
+데이터 종류,KITTI,KITTI,KITTI,KITTI,KITTI
+데이터 개수,7481,각각 200개씩,7481,6481,2388
+데이터 변형 여부,없음,"버전 1)
+- occluded 1이상 객체가 있는 이미지 100개 : 원본처럼 가려진 부분도 라벨링, occlusion 0은 이미지에서 제외
+- occluded 0 객체만 있는 이미지 100개
+
+버전 2)
+- occluded 1이상 객체가 있는 이미지 100개 : 보이는 부분만 bbox 라벨링, occlusion 0은 이미지에서 제외
+- occluded 0 객체만 있는 이미지 100개
+","Occlusion 0인 객체 중 ‘Car', 'Van', 'Truck’ 라벨을 가진 객체는 해당 라벨 중 bbox 정보를 통해 상하좌우 각각 50% 버전을 만들어 총 4개의 객체 라벨을 추가함
+
+예 : Car 0.80 0 -2.09 1013.39 182.46 1241.00 374.00
+→ Car 0.80 0 -2.09 1013.39 182.46 1241.00 374.00
+Car 0.80 4 -2.09 1013.39 182.46 1127.195 374.00
+Car 0.80 4 -2.09 1127.195 182.46 1241.00 374.00
+…",유지,"Occlusion 1 이상인 ‘Car', 'Truck’ 'Van’ 객체가 있는 이미지면 학습 데이터에서 제외함
+"
+테스트 데이터셋,"없음
+(그냥 val = train으로 진행후 해당 데이터셋에 예측. 시각화된 bbox를 놓고 정성적으로 판단)",KITTI 데이터 중 occlusion 객체가 있으면서 훈련 데이터셋과 중복되지 않는 100개에 대해 예측(시각화된 bbox를 정성적으로 판단),"없음
+(그냥 val = train으로 진행후 해당 데이터셋에 예측. 시각화된 bbox를 놓고 정성적으로 판단)",train에서 1000개 앞쪽 번호부터 떼옴,나머지 중 섞어서 300개
+결과,모델 학습 성공. 그러나 작은 객체 대부분이 DontCare로 탐지되어 DontCare 라벨 제외 필요,"보이는 부분만 라벨링한 모델에서는 occlusion이 있는 경우 보이는 부분만 bbox로 검출 잘하는 듯해 보임
+
+전체 라벨링(원본)한 모델에서는 occlusion 0인 clean한 객체에 대해서 의외로 검출을 못하는 듯 보였음","1. 클래스 확률이 거의 0.001 수준으로 낮음
+2. mAP는 높은데 예측된 객체의 클래스는 정확하지 않은 경우도 많은 것 같음
+3. 무엇보다 한 객체를 잘게 잘게 쪼개서 여러 개 bbox가 쳐진 예측 결과가 많음","1. bbox 측면에서 한 객체를 쪼개서 예측함
+
+2. PR_curve에서 bbox 쪼갠 class들(Car, Truck, Van)의 점수가 낮음
+
+3. 라벨링 되지 않은 작은 객체까지 탐지했는지는 미지수
+
+4. 판교 자율주행 데이터셋에 예측했을 때의 결과는 ‘가까이 있는 큰 객체 탐지 잘 못함’, ‘특히 porter 트럭 잘 탐지 못함’, ‘잘게 쪼개져서 예측하는 게 덜 하지만 아직 남아있음’","Occlusion 있는 객체들은 잘 잡아내지 못함
+
+Class imabalance(예 : person_sitting 등)으로 인해 Car class를 제외한 나머지에서는 Background False Negative 가 높음(해석 : 실제로는 Person_sitting인데, 그것을 잡아내지 못함)"
+학습 및 예측 결과 링크,https://www.notion.so/c37c90b49d5b4db6ae47015eeeb15b3c,https://drive.google.com/drive/folders/1G1ATHmnoXmrZWIgEKdcqO7nvPOLipuBs?usp=sharing,https://wandb.ai/kshhhhh91/YOLOv5/reports/Shared-panel-22-05-19-10-05-36--VmlldzoyMDM0Njky?accessToken=9o3dzz8nkxxbc4j8j6obinenca4cae3reeh490i5w1a4tll0mbhl4q7ppas0d7om,"https://wandb.ai/yj_synstealer/YOLOv5/runs/1kjut4z2?workspace=user-synstealer
+
+https://drive.google.com/drive/u/2/folders/1PJVLy1fvf4nxVjpd-wWFrQbMFhxHZw_R (판교 자율주행 데이터셋에 예측)","https://wandb.ai/yj_synstealer/YOLOv5/runs/36n8mz28?workspace=user-synstealer
+"
+GCP exp 넘버,7,"detect exp(partial), detect exp 2(whole)",19(끊겨서 val pred 이미지는 없음),39,41
