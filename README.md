@@ -31,8 +31,9 @@
 
 
 ### 🔹 데이터셋
-- [KITTI (Test Dataset)](http://www.cvlibs.net/datasets/kitti/)
+- [KITTI](http://www.cvlibs.net/datasets/kitti/)
 - [VKITTI2](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds-vkitti-2/)
+- [AI Hub 자율주행 Dataset](https://aihub.or.kr/aidata/8007)
 
 <br>
 
