@@ -50,6 +50,12 @@ Object Detection 모델 중 대표적인 세 가지 모델인 YOLOv5, RetinaNet,
 |Phase2|가려진 객체 탐지에 대한 성능 향상을 위한 연구|5/16 ~ 5/26|
 |Phase3|소형 객체 탐지에 대한 성능 향상을 위한 연구|5/27 ~ 6/7|
 
+<br>
+
+## 🌟 최종 결과
+
+[최종결과](https://github.com/Syn-stealer/Hackathon/blob/main/%EC%B5%9C%EC%A2%85%20%EC%97%B0%EA%B5%AC%20(Phase3)/%EC%B5%9C%EC%A2%85%20%EA%B2%B0%EA%B3%BC/Readme.md)
+
 <br><br>
 ## 📃 References Models
 - [YOLOv5](https://github.com/ultralytics/yolov5) <br>
